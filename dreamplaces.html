@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dream Places</title>
-    <link rel="stylesheet" href="dreamplaces.css">
+    <link rel="stylesheet" href="test1.css">
     <script src="https://kit.fontawesome.com/a48451008c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -53,21 +53,30 @@
     <button id="backToTop">Back to Top</button>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             let backToTopButton = document.getElementById("backToTop");
-
-            window.addEventListener("scroll", function() {
+    
+            window.addEventListener("scroll", function () {
                 if (window.scrollY > 300) {
-                    backToTopButton.style.display = "block"; // Show button
+                    backToTopButton.style.visibility = "visible";
+                    backToTopButton.style.opacity = "1";
+                    backToTopButton.style.transitionDelay = "0s";
                 } else {
-                    backToTopButton.style.display = "none"; // Hide button
+                    backToTopButton.style.opacity = "0";
+                    backToTopButton.style.transitionDelay = "0.3s";
+                    setTimeout(() => {
+                        if (window.scrollY <= 300) {
+                            backToTopButton.style.visibility = "hidden";
+                        }
+                    }, 300);
                 }
             });
-
-            backToTopButton.addEventListener("click", function() {
+    
+            backToTopButton.addEventListener("click", function () {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
     </script>
+    
 </body>
 </html>

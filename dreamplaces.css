@@ -49,28 +49,27 @@ h2, p, .nav a, h3 {
 
 .nav a:hover,
 .nav .active a {
-    background-color: #6a0dad;
+    background-color: #;
     border-radius: 5px;
     color: #1de9df;
 }
 
-/* Back to Top Button */
-#backToTop {
+/* Back to Top Button Styling */
+  /* Back to Top Button Styling */
+  #backToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 12px 18px;
-    font-size: 16px;
-    background-color: #4b0082;
+    background-color: #6a0dad;
     color: white;
     border: none;
-    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
-    display: none; /* Initially hidden */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-}
-
-#backToTop:hover {
-    background-color: #6a0dad;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
 }

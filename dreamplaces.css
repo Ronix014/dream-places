@@ -54,22 +54,20 @@ h2, p, .nav a, h3 {
     color: #1de9df;
 }
 
-/* Back to Top Button Styling */
-  /* Back to Top Button Styling */
-  #backToTop {
+#backToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #6a0dad;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #4b0082;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    visibility: hidden; /* Initially hidden */
-    opacity: 0;
-    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+#backToTop:hover {
+    background-color: #4b0082;
 }
